@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <hr />
+    <div>
+      <form action="#">
+        <div>
+          <label for="">제목:</label>
+          <textarea name="title" id="title1">메모 제목을 입력하세요</textarea>
+        </div>
+        <div>
+          <label for="">내용:</label>
+          <textarea name="content" id="content1">
+메모 내용을 입력하세요</textarea
+          >
+        </div>
+        <div><input type="submit" value="메모 저장" /></div>
+      </form>
+    </div>
+    <hr />
+    <div>
+      <div><h1>숙소 예약하기</h1></div>
+      <div>
+        <form action="#">
+          <div>
+            <label
+              >체크인:
+              <input type="date" />
+            </label>
+          </div>
+          <div>
+            <label
+              >체크아웃:
+              <input type="date" />
+            </label>
+          </div>
+          <div>
+            <label
+              >성인:
+              <input
+                type="number"
+                name="adult_number"
+                min="1"
+                max="10"
+                value="1"
+            /></label>
+          </div>
+          <div>
+            <label
+              >어린이:<input
+                type="number"
+                name="child_number"
+                min="1"
+                max="10"
+                value="0"
+            /></label>
+          </div>
+          <div>
+            <h4>선호객실타입</h4>
+            <label>
+              <input
+                type="radio"
+                id="radio1"
+                name="room_type"
+                value="Standard"
+              />스탠다드</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="radio2"
+                name="room_type"
+                value="deluxe"
+              />디럭스</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="radio3"
+                name="room_type"
+                value="suite"
+              />스위트</label
+            >
+          </div>
+          <label for="">요청사항</label>
+          <textarea name="textarea" id="textarea_request" rows="10" cols="20">
+특별히 요청하고 싶은 내용을 적어주세요</textarea
+          >
+          <div>
+            <input type="submit" value="예약하기" />
+          </div>
+        </form>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
