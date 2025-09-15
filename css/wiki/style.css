@@ -9,4 +9,37 @@
   box-sizing: border-box;
 }
 
+header {
+  background-color: #f3f3f3;
+}
+main {
+  margin: 1rem;
+}
+
 /* 시작 */
+
+.content {
+  margin: 0.1rem;
+}
+
+.content > p {
+  margin-bottom: 1rem;
+}
+
+.col {
+  border: 1px solid black;
+}
+
+footer {
+  background-color: rgb(240, 240, 240);
+  height: 4rem;
+}
+
+.border-box {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main-title {
+  font-size: 2rem;
+}

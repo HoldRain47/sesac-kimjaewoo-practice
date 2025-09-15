@@ -10,3 +10,31 @@
 }
 
 /* 시작 */
+.main-title {
+  font-size: 3rem;
+}
+
+hr {
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin: 1rem;
+}
+
+.content > hr {
+  margin: 1.5rem;
+}
+
+/* 폰트 */
+.nanum-pen-script-regular {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.content-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
