@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Foodie's Corner</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #ec7f13;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root"
+      style="font-family: Epilogue, 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap px-10 py-4"
+        >
+          <div class="flex items-center gap-3 text-gray-800">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)]"
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_6_543)">
+                <path
+                  d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  clip-rule="evenodd"
+                  d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_6_543">
+                  <rect fill="white" height="48" width="48"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <h2
+              class="text-gray-800 text-xl font-bold leading-tight tracking-tighter"
+            >
+              Foodie's Corner
+            </h2>
+          </div>
+          <div class="flex items-center gap-6">
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCe3yFCVG5gJjaiKn8Bfq_pwWjVcrXJA-UMBI9Ki4RdI2jmhzCnTvcMbFuYPhyo1hGJGtI6vGKDcgFtk0Zn7qKTpmY1Xp03S1_WzoX7TGbeAgGLmFY-YhwXos5ZQX_RjvJA2dsPGOPAiSR8eHTidqf6n177DxRuvWDkh2XoTcngeJxq1kObg16_aDOau2vu4RELiMK0LVhEeClHjSBiHQXCKPDWQ7hYFAevudawqlRa3W1CTV7Nt0u0Y5Px4kLneLP4_RsHZTbyQ1M');
+              "
+            ></div>
+          </div>
+        </header>
+        <nav
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3"
+        >
+          <div class="flex items-center gap-8">
+            <a
+              class="text-gray-800 text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors"
+              href="#"
+              >Korean</a
+            >
+            <a
+              class="text-gray-500 text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors"
+              href="#"
+              >Japanese</a
+            >
+            <a
+              class="text-gray-500 text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors"
+              href="#"
+              >Chinese</a
+            >
+            <a
+              class="text-gray-500 text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors"
+              href="#"
+              >Western</a
+            >
+          </div>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              >search</span
+            >
+            <input
+              class="h-10 w-72 rounded-md border border-gray-300 bg-white pl-10 pr-4 text-sm text-gray-800 placeholder-gray-400 focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]"
+              placeholder="Search for recipes, ingredients..."
+              type="text"
+            />
+          </div>
+        </nav>
+        <main class="flex-1 px-40 py-10">
+          <div
+            class="layout-content-container mx-auto flex max-w-[960px] flex-col gap-12"
+          >
+            <section>
+              <div class="flex items-center justify-between mb-6">
+                <h2
+                  class="text-gray-900 text-2xl font-bold leading-tight tracking-tighter"
+                >
+                  Top Picks
+                </h2>
+                <a
+                  class="text-sm font-medium text-[var(--primary-color)] hover:underline"
+                  href="#"
+                  >View all</a
+                >
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div
+                  class="group flex flex-col gap-4 rounded-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-md"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-0FC32vUyzf6LdgsEw12gt17aAHEftMFfGV2R4EYat1ASXbYtPqBm6uPWUxbYY8fTz0ScqY-k8Sh7Rh9JUcDDvYZ8-9nYnayzlGXuOpaL8tNrUblOkfXq0D13EXIE8PdVZix-g2JwomgJVpHfIqdkdvk69wqw-CbNHbZOCVtYLLY5F1R4vBkjjEw8SysRQh088LR7TkuD4OEwwlzFijZ3T3_B-JWamvwPIyNgd9GEGxVwDtHASZrqyR8bSMUxGhByGfHpkTGqyNw');
+                    "
+                  ></div>
+                  <div>
+                    <h3
+                      class="text-gray-800 text-base font-semibold leading-normal"
+                    >
+                      Kimchi Stew
+                    </h3>
+                    <div class="flex items-center gap-1 mt-1">
+                      <span
+                        class="material-symbols-outlined text-yellow-500 text-base"
+                        >star</span
+                      >
+                      <span class="text-gray-600 text-sm">4.5</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col gap-4 rounded-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-md"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvq_G6TXG8WOCPdLjmG0Tucbus5FxadSU9P86CHxjCKlDVH5Lna12U8Ymh-92t1tnfjFGAbgrnDYs9cz_VpXpIRp53DfN4fIcMI93rDVtdqfVFv0-Eg2byj7qh9q-3LEidp25PprqFrRcvlw9ZNgCIiXat92hMOvgPuPvZTU9uQjvnp1FHtdF0d99DyvRcgtJKstQKJegBMmIvaCazcma_voJ9WWpui6DNmn1CeWTiSZ86HMRVsRuY-BUccRN3GeHDulrtfdko3rM');
+                    "
+                  ></div>
+                  <div>
+                    <h3
+                      class="text-gray-800 text-base font-semibold leading-normal"
+                    >
+                      Bibimbap
+                    </h3>
+                    <div class="flex items-center gap-1 mt-1">
+                      <span
+                        class="material-symbols-outlined text-yellow-500 text-base"
+                        >star</span
+                      >
+                      <span class="text-gray-600 text-sm">4.8</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col gap-4 rounded-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-md"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPKDQ0rSAw2E2TlDZEuQfOjyclzn5AwGDKcYenO5tOCM0wI4JhEgZiudUS_2IeF-vHhZRbx3SOTQz7PJ-VVMTltZtf2gMiRFIY82ibMf-1TFUmqvQDgZo8CDdbG4JrMS15VtH2sRAdWG1LNJpwBBVq5w4Vnb_241TwSyYcUMaj31Cn4DRbFX0fMj3cjoHcqU1XbuTHaTYVkc2BoIw30Pch6IWCu24fwidfS0FzDaPkn222Fsfj5jWjkelk-PLEyij30dvqtvXCxF8');
+                    "
+                  ></div>
+                  <div>
+                    <h3
+                      class="text-gray-800 text-base font-semibold leading-normal"
+                    >
+                      Bulgogi
+                    </h3>
+                    <div class="flex items-center gap-1 mt-1">
+                      <span
+                        class="material-symbols-outlined text-yellow-500 text-base"
+                        >star</span
+                      >
+                      <span class="text-gray-600 text-sm">4.7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h2
+                class="text-gray-900 text-2xl font-bold leading-tight tracking-tighter mb-6"
+              >
+                Featured Reviews
+              </h2>
+              <div class="flex flex-col gap-8">
+                <div
+                  class="flex items-start justify-between gap-8 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="flex flex-1 flex-col gap-3">
+                    <h3 class="text-gray-800 text-lg font-bold leading-tight">
+                      Authentic Korean BBQ
+                    </h3>
+                    <p
+                      class="text-gray-600 text-sm font-normal leading-relaxed"
+                    >
+                      Experience the best Korean BBQ in town with a wide
+                      selection of meats and traditional side dishes.
+                    </p>
+                    <button
+                      class="flex items-center justify-center rounded-md h-9 px-4 mt-2 bg-[var(--primary-color)] text-white text-sm font-medium w-fit hover:bg-opacity-90 transition-colors"
+                    >
+                      Read More
+                    </button>
+                  </div>
+                  <div
+                    class="w-1/3 bg-center bg-no-repeat aspect-video bg-cover rounded-md flex-shrink-0"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyGE1eBHj2FduO2erCZ57OVvdBEphWUFBK7mQaebLrFQDk3mxvQZ6fzRyvkyEErYDZEvvtJK0xbPQOO9ioPYTN5gWgmNtXpbe472I1KxRXgLxgiauyNHHoQNV0v14npBz9IoPRDtyO97wHAb3W7PEgu1UJCXQcDUBDXAvcEDQg3uOq0YjZVnzjCtvL_Cig26xV7ptpAQLnu_SQI02yGL6YsHhd1-u-itg_pJ0NPHXdR6e1kVs86mFWrNac2GBmyWGbdugvzIgNPiE');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="flex items-start justify-between gap-8 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="flex flex-1 flex-col gap-3">
+                    <h3 class="text-gray-800 text-lg font-bold leading-tight">
+                      Spicy Kimchi Stew
+                    </h3>
+                    <p
+                      class="text-gray-600 text-sm font-normal leading-relaxed"
+                    >
+                      A hearty and spicy stew with fermented kimchi, tofu, and
+                      vegetables, perfect for a cold day.
+                    </p>
+                    <button
+                      class="flex items-center justify-center rounded-md h-9 px-4 mt-2 bg-[var(--primary-color)] text-white text-sm font-medium w-fit hover:bg-opacity-90 transition-colors"
+                    >
+                      Read More
+                    </button>
+                  </div>
+                  <div
+                    class="w-1/3 bg-center bg-no-repeat aspect-video bg-cover rounded-md flex-shrink-0"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAND5Uwvae-_4d-RfrGrL_kq1_T9uyIIfBltLS4W7Z4_Axnayq94UCw9KQy5nBPDlmfYbOueeA9aRGdA7gwRYWxH1qc0t9PXJzllDMvyfPNsGfxFNhE74qNyJDRcorOl9xNJR_E6MdsF82qa-sEt0xOON5ZPOfKfm_ChI0q218iBCv-k84HbR2ZvYKYlLVt0ncEG3gYpvctgN3MwC2JqppoVWaBR5IxQ9FR0G8sum2HElWsuVVJMEZ7rQ0AfMe6cLO19AmwvlF4uZ8');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="flex items-start justify-between gap-8 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="flex flex-1 flex-col gap-3">
+                    <h3 class="text-gray-800 text-lg font-bold leading-tight">
+                      Delicious Bibimbap
+                    </h3>
+                    <p
+                      class="text-gray-600 text-sm font-normal leading-relaxed"
+                    >
+                      A colorful and balanced dish with rice, assorted
+                      vegetables, meat, and a fried egg, topped with a spicy
+                      sauce.
+                    </p>
+                    <button
+                      class="flex items-center justify-center rounded-md h-9 px-4 mt-2 bg-[var(--primary-color)] text-white text-sm font-medium w-fit hover:bg-opacity-90 transition-colors"
+                    >
+                      Read More
+                    </button>
+                  </div>
+                  <div
+                    class="w-1/3 bg-center bg-no-repeat aspect-video bg-cover rounded-md flex-shrink-0"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW8ulej7NRO43_OnNEUImnM1MQ4T_k-VbA5EANuEBKBAsqcoGgTHAqol8-ClyIQuCO4pwFPu6j9hcb9EifsgbX00EREOxtpihuyvu1jBkOp_l417SHflcKrX1GP-g84zd3T2qMFBAiiTtlFYPJfJZvyfvYKlYk3sP3CboywefZjaN1eTEm9EZek98SUPUOZLg5rlpSAILnm1IgIkJa7eLCYUMcwE4lAbyrGpxBhbYuT6Aq9OwJemBXHtQklSP0pHz664Dp8RIXJB4');
+                    "
+                  ></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="border-t border-gray-200">
+          <div class="mx-auto max-w-[960px] py-6 text-center">
+            <p class="text-gray-500 text-sm">
+              © 2024 Foodie's Corner. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
