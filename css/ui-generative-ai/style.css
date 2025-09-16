@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+img {
+  object-fit: cover;
+}
+
 .full-frame {
   width: 100%;
   height: 100%;
@@ -51,7 +55,6 @@
 
 .card {
   width: 20rem;
-
   margin: 1rem;
   background-color: white;
   border-radius: 10px;
@@ -61,20 +64,46 @@
   flex-direction: column;
 }
 
-.card-foodimg {
+.card-foodimg1 {
   height: 8rem;
-  border: 1px solid black;
   border-radius: 10px 10px 0px 0px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA2CbtuJG7okaxS1lsRILsbZnvG38FPVDh_Q&s");
+  background-size: cover;
 }
+.card-foodimg2 {
+  height: 8rem;
+  border-radius: 10px 10px 0px 0px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbimFYEc38tYNMcrS8_Aex_eZrbOXXg81Wow&s");
+  background-size: cover;
+}
+.card-foodimg3 {
+  height: 8rem;
+  border-radius: 10px 10px 0px 0px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPu0XH4N8aqbboYXoFFB_nmdUDX3Jgn6WRRg&s");
+  background-size: cover;
+}
+.card-foodimg4 {
+  height: 8rem;
+  border-radius: 10px 10px 0px 0px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScnto450dXxtpPVbeAP2Z9TQmGbFAaatbV0Q&s");
+  background-size: cover;
+}
+.card-foodimg5 {
+  height: 8rem;
+  border-radius: 10px 10px 0px 0px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL7cdEh6nDG4N9H_36wrGoz8m1UfkrsemT0Q&s");
+  background-size: cover;
+}
+
 .card-rating {
   height: 1.5rem;
-  border: 1px solid black;
   line-height: 1.5rem;
+  margin-left: 1rem;
 }
 .card-foodname {
   height: 1.5rem;
-  border: 1px solid black;
   line-height: 1.5rem;
+  margin-left: 1rem;
 }
 
 .main {
@@ -92,13 +121,21 @@
   height: 60rem;
   margin: 1rem;
   padding: 20px;
-  text-align: center;
   background-color: white;
   border-radius: 10px;
-  color: white;
   flex-shrink: 0;
   gap: 10rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.maincontent-left-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.maincontent-img {
+  width: 100vw;
+  height: 50%;
 }
 
 .maincontent-right {
@@ -106,13 +143,13 @@
   height: 60rem;
   margin: 1rem;
   padding: 1rem;
-  text-align: center;
   background-color: white;
   border-radius: 10px;
-  color: white;
   flex-shrink: 0;
   gap: 10rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-image: url("https://i.pinimg.com/originals/5e/6e/71/5e6e7189fbe74bef265d1484aeef68f6.png");
+  background-size: contain;
 }
 
 .footer {
