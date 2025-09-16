@@ -15,7 +15,9 @@ header {
 main {
   margin: 1rem;
 }
-
+h3 {
+  margin: 0.5rem;
+}
 /* 시작 */
 
 .content {
