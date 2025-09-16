@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Foodie's Corner</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #ec7f13;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root"
+      style="font-family: Epilogue, 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <main class="flex-1 px-40 py-10">
+          <div
+            class="layout-content-container mx-auto flex max-w-[960px] flex-col gap-12"
+          >
+            <section>
+              <div class="flex items-center justify-between mb-6">
+                <h2
+                  class="text-gray-900 text-2xl font-bold leading-tight tracking-tighter"
+                >
+                  Top Picks
+                </h2>
+                <a
+                  class="text-sm font-medium text-[var(--primary-color)] hover:underline"
+                  href="#"
+                  >View all</a
+                >
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div
+                  class="group flex flex-col gap-4 rounded-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-md"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-0FC32vUyzf6LdgsEw12gt17aAHEftMFfGV2R4EYat1ASXbYtPqBm6uPWUxbYY8fTz0ScqY-k8Sh7Rh9JUcDDvYZ8-9nYnayzlGXuOpaL8tNrUblOkfXq0D13EXIE8PdVZix-g2JwomgJVpHfIqdkdvk69wqw-CbNHbZOCVtYLLY5F1R4vBkjjEw8SysRQh088LR7TkuD4OEwwlzFijZ3T3_B-JWamvwPIyNgd9GEGxVwDtHASZrqyR8bSMUxGhByGfHpkTGqyNw');
+                    "
+                  ></div>
+                  <div>
+                    <h3
+                      class="text-gray-800 text-base font-semibold leading-normal"
+                    >
+                      Kimchi Stew
+                    </h3>
+                    <div class="flex items-center gap-1 mt-1">
+                      <span
+                        class="material-symbols-outlined text-yellow-500 text-base"
+                        >star</span
+                      >
+                      <span class="text-gray-600 text-sm">4.5</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col gap-4 rounded-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-md"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvq_G6TXG8WOCPdLjmG0Tucbus5FxadSU9P86CHxjCKlDVH5Lna12U8Ymh-92t1tnfjFGAbgrnDYs9cz_VpXpIRp53DfN4fIcMI93rDVtdqfVFv0-Eg2byj7qh9q-3LEidp25PprqFrRcvlw9ZNgCIiXat92hMOvgPuPvZTU9uQjvnp1FHtdF0d99DyvRcgtJKstQKJegBMmIvaCazcma_voJ9WWpui6DNmn1CeWTiSZ86HMRVsRuY-BUccRN3GeHDulrtfdko3rM');
+                    "
+                  ></div>
+                  <div>
+                    <h3
+                      class="text-gray-800 text-base font-semibold leading-normal"
+                    >
+                      Bibimbap
+                    </h3>
+                    <div class="flex items-center gap-1 mt-1">
+                      <span
+                        class="material-symbols-outlined text-yellow-500 text-base"
+                        >star</span
+                      >
+                      <span class="text-gray-600 text-sm">4.8</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col gap-4 rounded-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-md"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPKDQ0rSAw2E2TlDZEuQfOjyclzn5AwGDKcYenO5tOCM0wI4JhEgZiudUS_2IeF-vHhZRbx3SOTQz7PJ-VVMTltZtf2gMiRFIY82ibMf-1TFUmqvQDgZo8CDdbG4JrMS15VtH2sRAdWG1LNJpwBBVq5w4Vnb_241TwSyYcUMaj31Cn4DRbFX0fMj3cjoHcqU1XbuTHaTYVkc2BoIw30Pch6IWCu24fwidfS0FzDaPkn222Fsfj5jWjkelk-PLEyij30dvqtvXCxF8');
+                    "
+                  ></div>
+                  <div>
+                    <h3
+                      class="text-gray-800 text-base font-semibold leading-normal"
+                    >
+                      Bulgogi
+                    </h3>
+                    <div class="flex items-center gap-1 mt-1">
+                      <span
+                        class="material-symbols-outlined text-yellow-500 text-base"
+                        >star</span
+                      >
+                      <span class="text-gray-600 text-sm">4.7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
