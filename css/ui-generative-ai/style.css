@@ -34,9 +34,8 @@
 .navigationbar {
   display: flex;
   width: 100%;
-  border: 1x groove rgb(196, 196, 196);
-  background-color: white;
   margin: 1rem;
+  opacity: 0.5;
 }
 
 .navigationbar-content > span {
@@ -52,16 +51,30 @@
 
 .card {
   width: 20rem;
-  height: 15rem;
-  border: 2px solid black;
+
   margin: 1rem;
-  padding: 1rem;
-  text-align: center;
   background-color: white;
   border-radius: 10px;
-  color: white;
   flex-shrink: 0;
-  gap: 10rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-foodimg {
+  height: 8rem;
+  border: 1px solid black;
+  border-radius: 10px 10px 0px 0px;
+}
+.card-rating {
+  height: 1.5rem;
+  border: 1px solid black;
+  line-height: 1.5rem;
+}
+.card-foodname {
+  height: 1.5rem;
+  border: 1px solid black;
+  line-height: 1.5rem;
 }
 
 .main {
@@ -76,8 +89,7 @@
 
 .maincontent-left {
   width: 75%;
-  height: 40rem;
-  border: 2px solid black;
+  height: 60rem;
   margin: 1rem;
   padding: 20px;
   text-align: center;
@@ -86,12 +98,12 @@
   color: white;
   flex-shrink: 0;
   gap: 10rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .maincontent-right {
   width: 25%;
-  height: 40rem;
-  border: 2px solid black;
+  height: 60rem;
   margin: 1rem;
   padding: 1rem;
   text-align: center;
@@ -100,6 +112,7 @@
   color: white;
   flex-shrink: 0;
   gap: 10rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
