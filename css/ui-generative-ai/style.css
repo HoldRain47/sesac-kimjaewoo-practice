@@ -1,0 +1,107 @@
+/* 초기화 */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.full-frame {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(234, 234, 234);
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.profile-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.navigationbar {
+  display: flex;
+  width: 100%;
+  border: 1x groove rgb(196, 196, 196);
+  background-color: white;
+  margin: 1rem;
+}
+
+.navigationbar-content > span {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card-selecter {
+  display: flex;
+  overflow: auto;
+  margin: 1rem;
+}
+
+.card {
+  width: 20rem;
+  height: 15rem;
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  color: white;
+  flex-shrink: 0;
+  gap: 10rem;
+}
+
+.main {
+  width: 100%;
+}
+
+.maincontent {
+  display: flex;
+  overflow: auto;
+  margin: 1rem;
+}
+
+.maincontent-left {
+  width: 75%;
+  height: 40rem;
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  color: white;
+  flex-shrink: 0;
+  gap: 10rem;
+}
+
+.maincontent-right {
+  width: 25%;
+  height: 40rem;
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  color: white;
+  flex-shrink: 0;
+  gap: 10rem;
+}
+
+.footer {
+  padding: 2rem;
+}
