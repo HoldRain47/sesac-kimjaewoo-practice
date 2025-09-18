@@ -306,6 +306,8 @@ if (drinkType === "coffee") {
     console.log("커피 주문 가능");
   } else if (userAge < 18 && isDecaf) {
     console.log("디카페인 커피 가능");
+  } else {
+    console.log("음료수만 가능");
   }
 } else if (drinkType === "tea") {
   console.log("차 주문 가능");
