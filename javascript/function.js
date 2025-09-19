@@ -5,8 +5,12 @@ console.log("============================TODO: 반환값이 없는 함수");
 // 함수명: greet (함수 선언식), greetArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
-// 화살표 함수 정의 코드
+function greet(name) {
+  console.log(`안녕하세요 ${name}님`);
+}
 
+// 화살표 함수 정의 코드
+const greetArrow = (name) => console.log(`안녕하세요 ${name}님`);
 // 함수 호출 코드
 greet("김철수");
 greetArrow("이영희");
@@ -21,9 +25,11 @@ console.log("============================TODO: 매개변수와 반환값이 있�
 // 함수명: multiply (함수 선언식), multiplyArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
-
+function multiply(num1, num2) {
+  return num1 * num2;
+}
 // 화살표 함수 정의 코드
-
+const multiplyArrow = (num1, num2) => num1 * num2;
 // 함수 호출 코드
 let result1 = multiply(4, 6);
 console.log(result1); // 24
@@ -42,8 +48,12 @@ console.log("============================TODO: 제곱 함수");
 
 // 함수 선언식 정의 코드
 
-// 화살표 함수 정의 코드
+function square(num) {
+  return num ** 2;
+}
 
+// 화살표 함수 정의 코드
+const squareArrow = (num) => num ** 2;
 // 함수 호출 코드
 let result3 = square(5);
 console.log(result3);
@@ -64,9 +74,18 @@ console.log(
 // 함수명: printFromOne (함수 선언식), printFromOneArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
+function printFromOne(num) {
+  for (let i = 1; i <= num; i++) {
+    console.log(i);
+  }
+}
 
 // 화살표 함수 정의 코드
-
+const printFromOneArrow = (num) => {
+  for (let i = 1; i <= num; i++) {
+    console.log(i);
+  }
+};
 // 함수 호출 코드
 printFromOne(5);
 
@@ -101,9 +120,21 @@ console.log(
 // 함수명: sum (함수 선언식), sumArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
-
+function sum(num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+}
 // 화살표 함수 정의 코드
-
+const sumArrow = (num) => {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+};
 // 함수 호출 코드
 let result5 = sum(10);
 console.log(result5);
@@ -122,9 +153,17 @@ console.log("============================TODO: 더 큰 수 반환 함수");
 // 함수명: max (함수 선언식), maxArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
-
+function max(num1, num2) {
+  if (num1 === num2) return num1;
+  else if (num1 > num2) return num1;
+  else return num2;
+}
 // 화살표 함수 정의 코드
-
+const maxArrow = (num1, num2) => {
+  if (num1 === num2) return num1;
+  else if (num1 > num2) return num1;
+  else return num2;
+};
 // 함수 호출 코드
 let result7 = max(5, 10);
 console.log(result7);
@@ -147,8 +186,25 @@ console.log("============================TODO: 두 숫자 사이의 합 반환 �
 // 함수명: sumBetween (함수 선언식), sumBetweenArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
-
+function sumBetween(num1, num2) {
+  let fnum = num1;
+  let lnum = num2;
+  let sum = 0;
+  for (fnum + 1; fnum <= lnum; fnum++) {
+    sum += fnum;
+  }
+  return sum;
+}
 // 화살표 함수 정의 코드
+const sumBetweenArrow = (num1, num2) => {
+  let fnum = num1;
+  let lnum = num2;
+  let sum = 0;
+  for (fnum + 1; fnum <= lnum; fnum++) {
+    sum += fnum;
+  }
+  return sum;
+};
 
 // 함수 호출 코드
 let result10 = sumBetween(5, 10);
@@ -167,9 +223,19 @@ console.log("============================TODO: 성적 등급 변환 함수");
 // 함수명: getGrade (함수 선언식), getGradeArrow (화살표 함수)
 
 // 함수 선언식 정의 코드
-
+function getGrade(num) {
+  if (num >= 90) return "A";
+  else if (num >= 80) return "B";
+  else if (num >= 70) return "C";
+  else return "D";
+}
 // 화살표 함수 정의 코드
-
+const getGradeArrow = (num) => {
+  if (num >= 90) return "A";
+  else if (num >= 80) return "B";
+  else if (num >= 70) return "C";
+  else return "D";
+};
 // 함수 호출 코드
 let result12 = getGrade(95);
 console.log(result12);
