@@ -2,7 +2,7 @@ import axios from "axios";
 const terminalWidth = process.stdout.columns;
 const border = "=".repeat(terminalWidth);
 //도메인 주소
-const BASE_URL = "https://dummyjson.com/";
+const BASE_URL = "https://dummyjson.com";
 
 // TODO: 모든 장바구니 목록 조회(Get all carts)
 // 아래 요구사항을 참고하여 코드를 작성한다
@@ -11,7 +11,11 @@ const BASE_URL = "https://dummyjson.com/";
 async function getAllCarts() {
   const response = await axios.get(`${BASE_URL}/carts`);
   const data = response["data"];
-  console.log(data);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  //[ 'carts', 'total', 'skip', 'limit' ]
+  //console.log(Object.keys(data));
+  console.log(data.carts);
   //console.table(Object.entries(response["data"]));
 }
 
@@ -58,6 +62,14 @@ console.log(border);
 // 1. 10번 장바구니 조회(Get a single cart) 요청
 // 2. 응답 데이터 객체 출력
 
+async function getSingleCart() {
+  const response = await axios.get(`${BASE_URL}/carts`);
+  const data = response["data"];
+  console.log(data.carts.find((cart) => cart.id === 10));
+}
+getSingleCart();
+
+//data.carts.find((cart) => cart.id === 5);
 /* 출력 결과
 {
   id: 10,
@@ -96,7 +108,12 @@ console.log(border);
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 10번 장바구니 조회(Get a single cart) 요청
 // 2. 응답 데이터 객체에서 상품의 수(total products) 데이터 출력
-
+async function getTotalProducts() {
+  const response = await axios.get(`${BASE_URL}/carts`);
+  const data = response["data"];
+  console.log(`답: ${data.carts.find((cart) => cart.id === 10).totalProducts}`);
+}
+getTotalProducts();
 /* 출력 결과
 2
 */
@@ -106,7 +123,12 @@ console.log(border);
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 10번 장바구니 조회(Get a single cart) 요청
 // 2. 응답 데이터 객체에서 상품의 목록(products) 배열 데이터 출력
-
+async function getProducts() {
+  const response = await axios.get(`${BASE_URL}/carts`);
+  const data = response["data"];
+  console.log(data.carts.find((cart) => cart.id === 10).products);
+}
+getProducts();
 /* 출력 결과
 [
   {
@@ -139,6 +161,17 @@ console.log(border);
 // 2. 응답 데이터 객체에서 상품의 목록(products) 배열 데이터 추출
 // 3. map() 메서드를 활용해서 배열 데이터에서 상품의 이름만 모아서 새로운 배열 생성
 // 4. 상품의 이름만 모은 배열 출력
+let productsList = [];
+async function getASingleCart() {
+  const response = await axios.get(`${BASE_URL}/carts`);
+  const data = response["data"];
+
+  productsList = data.carts
+    .find((cart) => cart.id === 10)
+    .products.map((product) => product.title);
+  console.log(productsList);
+}
+getASingleCart();
 
 /* 출력 결과
 [
