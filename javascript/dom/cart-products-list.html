@@ -32,7 +32,7 @@
       async function getCartProduct() {
         // 아래 코드 작성
         const response = await axios.get(`${BASE_URL}/cart/1`);
-        data = response["data"].products;
+        data = response["data"]["products"];
         console.log(data);
         const productsArray = data.map((element) => {
           // 적용할 로직
