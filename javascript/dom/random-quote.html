@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwindcss CDN -->
-    <script src="<https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- axios CDN -->
-    <script src="<https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js>"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="flex flex-col items-center mt-10">
@@ -17,23 +18,39 @@
         랜덤 인용문 요청하기
       </button>
       <ul id="quotes" class="list-disc list-inside">
-        <li class="text-lg mt-2">예시 인용문</li>
+        <li class="text-lg mt-2"></li>
       </ul>
     </div>
     <script>
+      const quotesTag = document.querySelector("#quotes");
       const getQuoteButton = document.querySelector("#get-quote");
       const quotesUl = document.querySelector("#quotes");
-
+      const BASE_URL = "https://dummyjson.com";
+      let data;
       // TODO: 랜덤 인용문 요청하고 응답 데이터 화면에 출력하기
       // 아래 요구사항을 만족하는 getQuoteButton 의 클릭(click) 이벤트 핸들러 함수를 완성한다
       // 1. 버튼을 클릭할 때 마다 랜덤 인용문 데이터 API 요청
+
       // 2. li 요소 생성하고 변수에 할당
       // 3. li 요소에 클래스(class) "text-lg mt-2" 설정
       // 4. 응답 데이터의 인용문구(quote)를 li 요소의 텍스트(textContent)로 설정
       // 5. 완성한 li 요소를 quotesUl(ul 요소)에 추가
 
-      getQuoteButton.addEventListener("click", () => {
+      getQuoteButton.addEventListener("click", (e) => {
         // 아래 코드 작성
+        //quotesTag.textContent = `${data}`;
+        async function getAllCarts() {
+          const response = await axios.get(`${BASE_URL}/quotes/random`);
+          data = response["data"].quote;
+        }
+        getAllCarts();
+
+        const li = document.createElement("li");
+        li.className = "text-lg mt-2";
+        li.textContent = data;
+        quotesTag.appendChild(li);
+
+        //quotesTag.innerHTML = `<li class="text-lg mt-2">${data}</li>`;
       });
     </script>
   </body>

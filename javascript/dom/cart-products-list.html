@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwindcss CDN -->
-    <script src="<https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- axios CDN -->
-    <script src="<https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="flex flex-col items-center mt-10">
@@ -27,9 +27,24 @@
       // 3-4. 완성한 li 요소를 cartList(ul 요소)에 추가
 
       const cartList = document.querySelector("ul#cartList");
+      const BASE_URL = "https://dummyjson.com";
 
       async function getCartProduct() {
         // 아래 코드 작성
+        const response = await axios.get(`${BASE_URL}/cart/1`);
+        data = response["data"].products;
+        console.log(data);
+        const productsArray = data.map((element) => {
+          // 적용할 로직
+          return element.title;
+        });
+        console.log(productsArray);
+        productsArray.forEach((product) => {
+          const li = document.createElement("li");
+          li.className = "text-lg mt-2";
+          li.textContent = product;
+          cartList.appendChild(li);
+        });
       }
 
       getCartProduct();
