@@ -1,76 +1,114 @@
+import axios from "axios";
+const BASE_URL = "https://dummyjson.com";
 // TODO: ID가 10인 상품(Product) 조회 후 리뷰(reviews) 출력
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. ID가 10인 상품(Product) 조회 요청
 // 2. 응답 데이터 객체에서 리뷰(reviews) 배열을 찾아서 출력
+async function getProductReview() {
+  const response = await axios.get(`${BASE_URL}/products/10`);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"]["reviews"];
+  console.log(data);
+}
+getProductReview();
+// /* 출력 결과
 
-/* 출력 결과
-
-[
-  {
-    rating: 1,
-    comment: 'Very dissatisfied!',
-    date: '2025-04-30T09:41:02.053Z',
-    reviewerName: 'Cameron Perez',
-    reviewerEmail: 'cameron.perez@x.dummyjson.com'
-  },
-  {
-    rating: 5,
-    comment: 'Very happy with my purchase!',
-    date: '2025-04-30T09:41:02.053Z',
-    reviewerName: 'Daniel Cook',
-    reviewerEmail: 'daniel.cook@x.dummyjson.com'
-  },
-  {
-    rating: 4,
-    comment: 'Highly impressed!',
-    date: '2025-04-30T09:41:02.053Z',
-    reviewerName: 'Addison Wright',
-    reviewerEmail: 'addison.wright@x.dummyjson.com'
-  }
-]
- */
-
+// [
+//   {
+//     rating: 1,
+//     comment: 'Very dissatisfied!',
+//     date: '2025-04-30T09:41:02.053Z',
+//     reviewerName: 'Cameron Perez',
+//     reviewerEmail: 'cameron.perez@x.dummyjson.com'
+//   },
+//   {
+//     rating: 5,
+//     comment: 'Very happy with my purchase!',
+//     date: '2025-04-30T09:41:02.053Z',
+//     reviewerName: 'Daniel Cook',
+//     reviewerEmail: 'daniel.cook@x.dummyjson.com'
+//   },
+//   {
+//     rating: 4,
+//     comment: 'Highly impressed!',
+//     date: '2025-04-30T09:41:02.053Z',
+//     reviewerName: 'Addison Wright',
+//     reviewerEmail: 'addison.wright@x.dummyjson.com'
+//   }
+// ]
+//  */
+async function getProductReviewRating() {
+  const response = await axios.get(`${BASE_URL}/products/10`);
+  let productCount = 0;
+  let totalRating = 0;
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"]["reviews"];
+  data.map((reviews) => {
+    productCount += 1;
+    totalRating += reviews.rating;
+  });
+  console.log(totalRating / productCount);
+}
+getProductReviewRating();
 // TODO: ID가 10인 상품(Product) 조회 후 리뷰(reviews)의 평균 점수(rating) 출력
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. ID가 10인 상품(Product) 조회 요청
 // 2. 응답 데이터 객체에서 리뷰(reviews) 배열 추출
 // 3. 리뷰(reviews) 배열에 포함된 점수(rating)로 평균 점수(rating) 계산 후 출력
-/* 출력 결과
-3.3333333333333335
-*/
+// /* 출력 결과
+// 3.3333333333333335
+// */
 
 // TODO: 게시글(posts) 태그(tag list) 목록 조회 후 출력
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 게시글(posts) 태그(tag list) 목록 조회 요청
 // 2. 응답 데이터를 출력한다
+async function getPostTagList() {
+  const response = await axios.get(`${BASE_URL}/posts/tag-list`);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"];
 
-/* 출력 결과
-[
-  "history",
-  "american",
-  "crime",
-  "french",
-  "fiction",
-  "english",
-  "magical",
-  "mystery",
-  "love",
-  "classic",
-  "memory",
-  "nostalgia",
-  "nature",
-  "tranquility",
-  "life",
-  "books",
-  // ...
-]
-*/
+  console.log(data);
+}
+getPostTagList();
+// /* 출력 결과
+// [
+//   "history",
+//   "american",
+//   "crime",
+//   "french",
+//   "fiction",
+//   "english",
+//   "magical",
+//   "mystery",
+//   "love",
+//   "classic",
+//   "memory",
+//   "nostalgia",
+//   "nature",
+//   "tranquility",
+//   "life",
+//   "books",
+//   // ...
+// ]
+// */
 
 // TODO: 특정(tag)의 게시글(posts) 목록 조회 후 출력
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 특정 태그의 게시글(posts) 목록 조회 요청
 // 2. 응답 데이터를 출력한다
+
+async function getTagPosts() {
+  const response = await axios.get(`${BASE_URL}/posts/tag/life`);
+  const data = response["data"];
+  console.log(data);
+}
+getTagPosts();
 /* 출력 결과
+
 // life 태그 게시글
 {
   posts: [
@@ -159,6 +197,20 @@
 // 1. 상품명으로 상품(Products) 조회(Search products) 요청
 // 2. 객체 데이터에서 검색 수(total) 출력
 
+async function getProductTotal() {
+  const search = "phone";
+  const response = await axios.get(`${BASE_URL}/products/search?q=${search}`);
+  let productCount = 0;
+  let totalRating = 0;
+
+  const data = response["data"]["products"];
+  // data.map((reviews) => {]
+  //   productCount += 1;
+  //   totalRating += reviews.rating;
+  // });
+  console.log(data.length);
+}
+getProductTotal();
 /* 출력 결과
 // phone 검색 시
 23
