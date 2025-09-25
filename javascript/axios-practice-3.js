@@ -1,8 +1,17 @@
+import axios from "axios";
+const BASE_URL = "https://dummyjson.com";
 // TODO: 식사(meal) 종류가 lunch 인 레시피(recipe) 조회 요청
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 식사(meal) 종류가 lunch 인 레시피(recipe) 조회 요청
 // 2. 응답 데이터 객체에서 recipes 배열을 찾아서 출력
-
+async function getLunchRecipes() {
+  const response = await axios.get(`${BASE_URL}/recipes/meal-type/lunch`);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"];
+  console.log(data);
+}
+getLunchRecipes();
 /* 출력 결과
 recipes: [
   {
@@ -34,7 +43,24 @@ recipes: [
 // 3. 추가할 레시피(recipe) 정보
 // name: 'Kimbap'
 // cuisine: 'Korean
+async function addRecipe() {
+  const URL = "https://dummyjson.com/recipes/add";
+  const METHOD = "POST";
+  const BODY = { name: "Kimbap", cuisine: "Korean" };
+  const HEADERS = { "Content-Type": "application/json" };
 
+  const config = {
+    url: URL,
+    method: METHOD,
+    headers: HEADERS,
+    data: BODY,
+  };
+
+  const result = await axios(config);
+  const data = result["data"];
+  console.log(data);
+}
+addRecipe();
 /* 출력 결과
 { id: 51, name: 'Kimbap', cuisine: 'Korean' }
 */
@@ -44,6 +70,17 @@ recipes: [
 // 1. 이름으로 상용자 검색(search)하고, 사용자(users) 정보를 찾아서 출력
 // 2. 검색어 : 'anna'
 
+//콘솔입력 readline 모듈
+
+async function searchUser() {
+  let usersName = "anna";
+  const response = await axios.get(`${BASE_URL}/users/search?q=${usersName}`);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"];
+  console.log(data);
+}
+searchUser();
 /* 출력 결과
 [
   {
@@ -85,6 +122,15 @@ recipes: [
 // 1. 10번 사용자의 할 일 (todo) 목록 조회
 // 2. 응답 데이터 객체에서 todos 배열을 찾아서 출력
 
+async function getLunchRecipes() {
+  const response = await axios.get(`${BASE_URL}/todos/user/9`);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"]["todos"];
+  console.log(data);
+}
+getLunchRecipes();
+
 /* 출력 결과
 [
   {
@@ -103,7 +149,22 @@ recipes: [
 */
 
 // TODO: 전체 댓글 목록 조회 후 내용(body), 좋아요(likes), 사용자명(username) 출력
-
+async function getComments() {
+  const response = await axios.get(`${BASE_URL}/comments`);
+  //status,statusText,headers,config,request,data
+  //console.log(`${Object.keys(response)}`);
+  const data = response["data"]["comments"];
+  const Comments = data.map((Comment) => {
+    let Collect = {
+      body: Comment["body"],
+      likes: Comment["likes"],
+      username: Comment["username"],
+    };
+    return Collect;
+  });
+  console.log(Comments);
+}
+getComments();
 /* 출력 결과
 [
   {
