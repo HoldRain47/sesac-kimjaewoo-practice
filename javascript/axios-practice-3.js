@@ -122,14 +122,14 @@ searchUser();
 // 1. 10번 사용자의 할 일 (todo) 목록 조회
 // 2. 응답 데이터 객체에서 todos 배열을 찾아서 출력
 
-async function getLunchRecipes() {
+async function getTodo() {
   const response = await axios.get(`${BASE_URL}/todos/user/9`);
   //status,statusText,headers,config,request,data
   //console.log(`${Object.keys(response)}`);
   const data = response["data"]["todos"];
   console.log(data);
 }
-getLunchRecipes();
+getTodo();
 
 /* 출력 결과
 [
