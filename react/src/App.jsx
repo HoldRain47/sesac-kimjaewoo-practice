@@ -1,11 +1,15 @@
-import { useState } from "react";
+import React from "react";
+//import String from "./components/State/StringState";
+//import Object from "./components/State/ObjectState";
+import Colculator from "./components/Colculator/Colculator";
 
+// App 컴포넌트는 Header 컴포넌트와 Interpolation 컴포넌트를 포함한다
+// App 컴포넌트는 Header 컴포넌트와 Interpolation 컴포넌트가 중첩됐다
 export default function App() {
   return (
-    <>
-      {/* Tailwind CSS 적용 */}
-      {/* 텍스트 크기 1.875rem, 굵기 두껍게, 색상 빨간색*/}
-      <h1 className="text-3xl font-bold text-red-500">Hello World</h1>
-    </>
+    <div>
+      {/* <Object></Object> */}
+      <Colculator></Colculator>
+    </div>
   );
 }
